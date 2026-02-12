@@ -46,7 +46,7 @@ const imageGroups = [
   {
     id: 1,
     category: "Jujutsu",
-    tags: ["amigos", "Cartoon"],
+    tags: ["Amigos", "Cartoon"],
     images: [
       { src: "public/img/JJK2.jpeg", alt: "Amigo 1" },
       { src: "public/img/JJK1.jpeg", alt: "Amigo 2" },
@@ -55,7 +55,7 @@ const imageGroups = [
   {
     id: 2,
     category: "Namorados",
-    tags: ["namorados", "Anime"],
+    tags: ["Namorados", "Anime"],
     images: [
       { src: "public/img/Meliodas.jpeg", alt: "Namorado 1" },
       { src: "public/img/Meliodas2.jpeg", alt: "Namorado 2" },
