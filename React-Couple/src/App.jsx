@@ -7,7 +7,7 @@ function App() {
     <main style={{ padding: '20px', fontFamily: 'sans-serif' }}>
       <header>
         <div className="container">
-          <h1>Iconify</h1>
+          <h1 className="titulo">Iconify</h1>
           <nav>
             <ul>
               <li><a href="#">Início</a></li>
@@ -22,11 +22,11 @@ function App() {
         <div className="container">
           <h2>Icons alinhados para perfis que se conectam</h2>
           <p>Novas combinações todos os dias</p>
-          <a href="" className="btn">Explorar</a>
+          <a className="explorar" href="#explorar">Explorar</a>
         </div>
       </section>
 
-      <section className="modelos">
+      <section className="modelos" id = "explorar">
         <div className="container">
           <StatusCard/>
         </div>
@@ -116,8 +116,8 @@ const imageGroups = [
     category: "Anime",
     tags: ["Anime", "Amigos"],
     images: [
-      { src: "public/img/Cat.jpeg", alt: "Anime 1" },
-      { src: "public/img/Cat1.jpeg", alt: "Anime 2" },
+      { src: "public/img/Cat1.jpeg", alt: "Anime 1" },
+      { src: "public/img/Cat.jpeg", alt: "Anime 2" },
     ],
   
   },
@@ -156,8 +156,8 @@ const imageGroups = [
     category: "Anime",
     tags: ["Anime", "Amigos"],
     images: [
-      { src: "public/img/ai-1.jpg", alt: "Anime 1" },
-      { src: "public/img/ai-2.jpg", alt: "Anime 2" },
+      { src: "public/img/ai-2.jpg", alt: "Anime 1" },
+      { src: "public/img/ai-1.jpg", alt: "Anime 2" },
     ],
   
   },
@@ -166,8 +166,8 @@ const imageGroups = [
     category: "Anime",
     tags: ["Anime", "Amigos"],
     images: [
-      { src: "public/img/DazaiC-1.jpg", alt: "Anime 1" },
-      { src: "public/img/DazaiC-2.jpg", alt: "Anime 2" },
+      { src: "public/img/DazaiC-2.jpg", alt: "Anime 1" },
+      { src: "public/img/DazaiC-1.jpg", alt: "Anime 2" },
     ],
   
   },
@@ -216,8 +216,8 @@ const imageGroups = [
     category: "Anime",
     tags: ["Anime", "Amigos"],
     images: [
-      { src: "public/img/img1-1.jpg", alt: "Anime 1" },
-      { src: "public/img/img1-2.jpg", alt: "Anime 2" },
+      { src: "public/img/img1-2.jpg", alt: "Anime 1" },
+      { src: "public/img/img1-1.jpg", alt: "Anime 2" },
     ],
   
   },
@@ -270,19 +270,24 @@ const Filter = ({ selectedTags, onTagChange, allTags }) => {
   return (
     <div className="filter">
       <h3>Filtros por Tag</h3>
+
       {allTags.map(tag => (
-        <label key={tag} className="filter-label">
+        <label key={tag} className="checkbox">
           <input
             type="checkbox"
             checked={selectedTags.includes(tag)}
             onChange={() => onTagChange(tag)}
           />
-          {tag}
+
+          <span className="checkmark"></span>
+          <span className="label-text">{tag}</span>
         </label>
       ))}
+
     </div>
   );
 };
+
 
 // Componente ImageCard
 const ImageCard = ({ group, onImageClick }) => {
@@ -300,7 +305,7 @@ const ImageCard = ({ group, onImageClick }) => {
           />
         ))}
       </div>
-      <p>Tags: {group.tags.join(', ')}</p>
+      <p2>Tags: {group.tags.join(', ')}</p2>
     </div>
   );
 };
