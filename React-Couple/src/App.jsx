@@ -7,7 +7,7 @@ function App() {
     <main style={{ padding: '20px', fontFamily: 'sans-serif' }}>
       <header>
         <div className="container">
-          <h1 className="titulo">Iconify</h1>
+          <h1 className="titulo">Duoflair</h1>
           <nav>
             <ul>
               <li><a href="#">Início</a></li>
@@ -33,7 +33,7 @@ function App() {
       </section>
       <footer>
         <div className="container">
-            <p>&copy; 2025 Iconify. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Duoflair. Todos os direitos reservados.</p>
         </div>
     </footer>
     </main>
