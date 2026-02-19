@@ -233,7 +233,7 @@ netlify deploy --prod
 # Instalar Vercel CLI
 npm install -g vercel
 
-# Deploy
+# Deplo
 vercel
 ```
 
